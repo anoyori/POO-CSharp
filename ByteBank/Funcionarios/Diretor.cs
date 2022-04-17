@@ -1,21 +1,10 @@
 ﻿namespace ByteBank.Funcionarios
 {
-    public class Diretor
+    public class Diretor : Funcionario
     {
-
-        private int _tipo;
-        public string Nome { get; set; }
-        public string CPF { get; set; }
-        public double Salario { get; set; }
-
-        public Diretor(int tipo)
-        {
-            _tipo = tipo;
-        }
-
-        public double GetBonificacao()
-        {
-            return Salario;
+        public override double GetBonificacao()
+        {           
+            return Salario + base.GetBonificacao(); ;
         }
     }
 }
